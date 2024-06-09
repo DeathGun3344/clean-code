@@ -2,7 +2,7 @@
 
 namespace {{ testNamespace }};
 
-use {{ namespace }}null{{ useCaseName }}Request;
+use {{ namespace }}\{{ useCaseName }}Request;
 
 class {{ useCaseName }}ValidationTest extends {{ useCaseName }}Base
 {

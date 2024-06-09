@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-use DeathGun\vendeurs\Domain\Commons\MapErrorsToResponse;
+use DeathGun\CleanCode\Commons\Handlers\LazyAssertionExceptionHandler;
 use Assert\LazyAssertionException;
 
 readonly class {{ useCaseName }}
@@ -23,7 +23,8 @@ readonly class {{ useCaseName }}
             $this->validateRequest();
             $this->process();
         } catch (LazyAssertionException $e) {
-            MapErrorsToResponse::execute($this->response, $e);
+            $errors = LazyAssertionExceptionHandler::handle($e);
+            $this->response->addErrors($errors);
         } finally {
             $presenter->present($this->response);
         }

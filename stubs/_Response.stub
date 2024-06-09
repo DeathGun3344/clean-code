@@ -2,11 +2,11 @@
 
 namespace {{ namespace }};
 
-use DeathGun\vendeurs\Domain\Commons\Errors\HasErrors;
-use DeathGun\vendeurs\Domain\Commons\Errors\HasErrorsInterface;
-use DeathGun\vendeurs\Domain\Commons\Interfaces\IsOkInterface;
+use DeathGun\CleanCode\Commons\Errors\HasErrors;
+use DeathGun\CleanCode\Commons\Errors\HasErrorsInterface;
+use DeathGun\CleanCode\Commons\Interfaces\IsOk;
 
-class {{ useCaseName }}Response implements HasErrorsInterface, IsOkInterface
+class {{ useCaseName }}Response implements HasErrorsInterface, IsOk
 {
     use HasErrors;
 

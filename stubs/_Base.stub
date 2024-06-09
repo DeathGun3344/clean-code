@@ -2,26 +2,22 @@
 
 namespace {{ testNamespace }};
 
-use {{ namespace }}null{{ useCaseName }}PresenterInterface;
-use {{ namespace }}null{{ useCaseName }}Request;
-use {{ namespace }}null{{ useCaseName }}Response;
-use {{ namespace }}null{{ useCaseName }};
-use DeathGun\vendeurs\Tests\HelperTestCase;
-use DeathGun\vendeurs\Tests\Mocks\EntityBuilderFactory;
+use {{ namespace }}\{{ useCaseName }}PresenterInterface;
+use {{ namespace }}\{{ useCaseName }}Request;
+use {{ namespace }}\{{ useCaseName }}Response;
+use {{ namespace }}\{{ useCaseName }};
+use DeathGun\CleanCode\Tests\HelperTestCase;
 
 abstract class {{ useCaseName }}Base extends HelperTestCase implements {{ useCaseName }}PresenterInterface
 {
 
     protected {{ useCaseName }}Response $response;
     protected {{ useCaseName }} $useCase;
-    protected EntityBuilderFactory $builder;
 
 
     public function setUp(): void
     {
         parent::setUp();
-
-        $this->builder = new EntityBuilderFactory();
 
         $this->prepareData();
         $this->initializeMocks();

@@ -9,7 +9,7 @@ class {{ useCaseName }}Validator
     public static function validate({{ useCaseName }}Request $request): void
     {
         Assert::lazy()
-//            ->that()
+            ->that()
             ->verifyNow();
     }
 }
