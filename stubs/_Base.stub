@@ -22,8 +22,6 @@ abstract class {{ useCaseName }}Base extends HelperTestCase implements {{ useCas
         $this->prepareData();
         $this->initializeMocks();
         $this->configureUseCase();
-
-        $this->useCase = new {{ useCaseName }}();
     }
 
     private function prepareData(): void
@@ -38,7 +36,7 @@ abstract class {{ useCaseName }}Base extends HelperTestCase implements {{ useCas
 
     private function configureUseCase(): void
     {
-
+        $this->useCase = new {{ useCaseName }}();
     }
 
     public function present({{ useCaseName }}Response $response): void

@@ -29,8 +29,8 @@ class MakeUseCase
 
     private function createDirectoriesIfNotExists(): void
     {
-        mkdir($this->useCasePath());
-        mkdir($this->unitTestPath());
+        mkdir($this->useCasePath(), 0777, true);
+        mkdir($this->unitTestPath(), 0777, true);
     }
 
     private function useCasePath(): string
