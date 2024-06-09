@@ -27,7 +27,5 @@
     "psr-4": {
       "DeathGun\\CleanCode\\Tests\\": "tests/"
     }
-  },
-  "minimum-stability": "stable",
-  "prefer-stable": true
+  }
 }
