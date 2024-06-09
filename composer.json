@@ -1,6 +1,15 @@
 {
   "name": "deathgun3344/clean-code",
+  "type": "library",
   "version": "1.0.0",
+  "description": "Set of tools to implement clean architecture",
+  "authors": [
+    {
+      "name": "Yao Florentin",
+      "email": "florentin.yao.3344@gmail.com",
+      "role": "Developer"
+    }
+  ],
   "require": {
     "ramsey/uuid": "^4.7",
     "beberlei/assert": "^3.3"
