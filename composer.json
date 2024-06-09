@@ -3,6 +3,7 @@
   "type": "library",
   "version": "1.0.0",
   "description": "Set of tools to implement clean architecture",
+  "license": "MIT",
   "authors": [
     {
       "name": "Yao Florentin",
