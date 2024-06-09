@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ testNamespace }};
+
+use {{ namespace }}\{{ useCaseName }}PresenterInterface;
+use {{ namespace }}\{{ useCaseName }}Request;
+use {{ namespace }}\{{ useCaseName }}Response;
+use {{ namespace }}\{{ useCaseName }};
+use DeathGun\vendeurs\Tests\HelperTestCase;
+
+class {{ useCaseName }}Test extends {{ useCaseName }}Base
+{
+
+    public function test(): void
+    {
+        $request = new {{ useCaseName }}Request();
+
+        $this->useCase->execute($request, $this);
+    }
+}

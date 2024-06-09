@@ -1,0 +1,41 @@
+<?php
+
+namespace {{ namespace }};
+
+use DeathGun\vendeurs\Domain\Commons\MapErrorsToResponse;
+use Assert\LazyAssertionException;
+
+readonly class {{ useCaseName }}
+{
+
+    private {{ useCaseName }}Request $request;
+    private {{ useCaseName }}Response $response;
+
+    public function __construct()
+    {
+        $this->response = new {{ useCaseName }}Response();
+    }
+
+    public function execute({{ useCaseName }}Request $request, {{ useCaseName }}PresenterInterface $presenter): void
+    {
+        try {
+            $this->request = $request;
+            $this->validateRequest();
+            $this->process();
+        } catch (LazyAssertionException $e) {
+            MapErrorsToResponse::execute($this->response, $e);
+        } finally {
+            $presenter->present($this->response);
+        }
+    }
+
+    private function validateRequest(): void
+    {
+        {{ useCaseName }}Validator::validate($this->request);
+    }
+
+    private function process(): void
+    {
+
+    }
+}

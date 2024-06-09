@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+use DeathGun\vendeurs\Domain\Commons\Errors\HasErrors;
+use DeathGun\vendeurs\Domain\Commons\Errors\HasErrorsInterface;
+use DeathGun\vendeurs\Domain\Commons\Interfaces\IsOkInterface;
+
+class {{ useCaseName }}Response implements HasErrorsInterface, IsOkInterface
+{
+    use HasErrors;
+
+    private bool $isOk = false;
+
+    public function isOk(): bool
+    {
+        return $this->isOk;
+    }
+}

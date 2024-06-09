@@ -1,0 +1,21 @@
+{
+  "name": "deathgun3344/clean-code",
+  "version": "1.0.0",
+  "require": {
+    "ramsey/uuid": "^4.7",
+    "beberlei/assert": "^3.3"
+  },
+    "autoload": {
+        "psr-4": {
+        "DeathGun\\CleanCode\\": "src/"
+        }
+    },
+  "autoload-dev": {
+    "psr-4": {
+      "DeathGun\\CleanCode\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.2"
+  }
+}

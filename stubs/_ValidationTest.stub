@@ -1,0 +1,24 @@
+<?php
+
+namespace {{ testNamespace }};
+
+use {{ namespace }}null{{ useCaseName }}Request;
+
+class {{ useCaseName }}ValidationTest extends {{ useCaseName }}Base
+{
+
+    private function execute(string $field, string $message, {{ useCaseName }}Request $request): void
+    {
+        $this->useCase->execute($request, $this);
+
+        $this->assertResponseHasError($this->response, $field, $message);
+    }
+
+    public function test(): void
+    {
+        $request = new {{ useCaseName }}Request();
+
+        $this->execute('field', 'message', $request);
+
+    }
+}

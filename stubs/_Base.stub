@@ -1,0 +1,52 @@
+<?php
+
+namespace {{ testNamespace }};
+
+use {{ namespace }}null{{ useCaseName }}PresenterInterface;
+use {{ namespace }}null{{ useCaseName }}Request;
+use {{ namespace }}null{{ useCaseName }}Response;
+use {{ namespace }}null{{ useCaseName }};
+use DeathGun\vendeurs\Tests\HelperTestCase;
+use DeathGun\vendeurs\Tests\Mocks\EntityBuilderFactory;
+
+abstract class {{ useCaseName }}Base extends HelperTestCase implements {{ useCaseName }}PresenterInterface
+{
+
+    protected {{ useCaseName }}Response $response;
+    protected {{ useCaseName }} $useCase;
+    protected EntityBuilderFactory $builder;
+
+
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->builder = new EntityBuilderFactory();
+
+        $this->prepareData();
+        $this->initializeMocks();
+        $this->configureUseCase();
+
+        $this->useCase = new {{ useCaseName }}();
+    }
+
+    private function prepareData(): void
+    {
+
+    }
+
+    private function initializeMocks(): void
+    {
+
+    }
+
+    private function configureUseCase(): void
+    {
+
+    }
+
+    public function present({{ useCaseName }}Response $response): void
+    {
+        $this->response = $response;
+    }
+}

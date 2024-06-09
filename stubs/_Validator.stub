@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Assert\Assert;
+
+class {{ useCaseName }}Validator
+{
+    public static function validate({{ useCaseName }}Request $request): void
+    {
+        Assert::lazy()
+//            ->that()
+            ->verifyNow();
+    }
+}

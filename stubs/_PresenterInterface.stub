@@ -1,0 +1,8 @@
+<?php
+
+namespace {{ namespace }};
+
+interface {{ useCaseName }}PresenterInterface
+{
+    public function present({{ useCaseName }}Response $response): void;
+}
